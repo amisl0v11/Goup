@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/listFragment">
+    <fragment
+        android:id="@+id/listFragment"
+        android:name="com.example.myapplication.group.GroupListFragment"
+        android:label="fragment_list"
+        tools:layout="@layout/fragment_group_list" >
+        <action
+            android:id="@+id/action_listFragment_to_insertFragment"
+            app:destination="@+id/insertFragment" />
+        <action
+            android:id="@+id/action_listFragment_to_travelFragment"
+            app:destination="@id/travelFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/insertFragment"
+        android:name="com.example.myapplication.group.GroupInsertFragment"
+        android:label="fragment_insert"
+        tools:layout="@layout/fragment_insert" />
+    <fragment
+        android:id="@+id/travelFragment"
+        android:name="com.example.myapplication.travel.TravelFragment"
+        android:label="fragment_travel"
+        tools:layout="@layout/fragment_travel" />
+</navigation>
